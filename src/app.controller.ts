@@ -3,7 +3,7 @@ import { AppService } from './app.service';
 import { ApiOperation, ApiProperty, ApiResponse, ApiTags } from '@nestjs/swagger';
 
 
-class GetServerListeningResponse {
+export class GetServerListeningResponse {
   @ApiProperty({
     example: true,
     description: "ok",
@@ -31,6 +31,6 @@ export class AppController {
   @ApiResponse({status: 200, description: 'Ok', type: GetServerListeningResponse  })          //Swagger
   getHello(): GetServerListeningResponse {
     Logger.log(`API is working`);
-    return {ok: true, message: "API is working"};
+    return this.appService.getIsWorking();
   }
 }
