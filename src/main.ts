@@ -23,7 +23,6 @@ export async function bootstrap() {
   const config = new DocumentBuilder()
     .setTitle(swaggerTitle)
     .setDescription(swaggerDescription)
-    //.setContact('{ jc - develop }',  'https://github.com/JulianCallejas', 'micorreo@example.com')    //contact options website and email
     .setVersion('1.0')
     .addBearerAuth()
     .build();
