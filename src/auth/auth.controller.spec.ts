@@ -3,9 +3,10 @@ import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
 import { RegisterUserDto } from './dto/register-user.dto';
 import { LoginUserDto } from './dto/login-user.dto';
-import { HttpStatus } from '@nestjs/common';
+import { HttpStatus, ExecutionContext } from '@nestjs/common';
 import { User } from 'src/user/entities/user.entity';
 import { Role } from '@prisma/client';
+import { GetUser } from './decorators'; // Import the GetUser decorator
 
 describe('AuthController', () => {
     let controller: AuthController;
@@ -94,7 +95,6 @@ describe('AuthController', () => {
 
     describe('refreshToken', () => {
         it('should refresh the token', async () => {
-
             const userRole: Role = 'user';
             const mockUser = {
                 id: '2313w49-0db7-4v79-aacc-52624343bf2t',
@@ -111,11 +111,12 @@ describe('AuthController', () => {
             });
 
             authService.refreshToken.mockReturnValue(expectedResult);
-
             const result = controller.refreshToken(mockUser as any);
-
+            
             expect(result).toEqual(expectedResult);
             expect(authService.refreshToken).toHaveBeenCalledWith(mockUser);
         });
     });
+
+    
 });
