@@ -22,6 +22,8 @@ This **`NestJS Auth REST API Template`** is designed to jumpstart your developme
 
 - Swagger Documentation: Comprehensive documentation with Swagger UI for easy API exploration and integration.
 
+- Jest Unit Tests : Unit tests for the services and controllers.
+
 ## Technologies Used
 
 - Nest.js: A progressive Node.js framework for building efficient, reliable, and scalable server-side applications.
@@ -32,6 +34,9 @@ This **`NestJS Auth REST API Template`** is designed to jumpstart your developme
 
 - JWT: JSON Web Tokens for secure authentication and authorization.
 
+- Swagger: A powerful suite of API developer tools for documentation, testing, and collaboration.
+
+- Jest: A JavaScript testing framework developed by Facebook for testing JavaScript code.
 
 ## Getting Started
 
@@ -95,3 +100,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 For any issues or questions related to this API template, please open an issue on GitHub.
 
 #### 🌟 You’re the superstar of our show! Thanks for lighting up our repository with your presence. We hope you enjoy exploring our code as much as we enjoyed writing it.
+
+<p align="center">
+<a href="https://github.com/JulianCallejas">
+  <img src="https://res.cloudinary.com/dphleqb5t/image/upload/v1740784502/github-jc-develop/JC-LOGO-Horizontal-170-50-thin-github_uu3b5n.svg" width="170" alt="{ jc - develop }"  /> 
+</a>
+</p>
