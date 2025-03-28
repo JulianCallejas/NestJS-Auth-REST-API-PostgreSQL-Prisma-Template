@@ -2,8 +2,8 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
- import { swaggerOptions, swaggerTitle, swaggerDescription } from './common';
- './common'
+import { swaggerOptions, swaggerTitle, swaggerDescription } from './common';
+
 export async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
@@ -17,9 +17,7 @@ export async function bootstrap() {
   );
 
   // Swagger Configuration --------------------------------
-
   // swaggerOptions, swaggerTitle, swaggerDescription variables are customized and defined in common/swagger/swagger.config.ts
-
   const config = new DocumentBuilder()
     .setTitle(swaggerTitle)
     .setDescription(swaggerDescription)
@@ -27,7 +25,7 @@ export async function bootstrap() {
     .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  
+
   SwaggerModule.setup('api', app, document, swaggerOptions);
 
   // End Swagger Configurations --------------------------------
@@ -36,10 +34,8 @@ export async function bootstrap() {
   //Enable CORS
   app.enableCors();
 
-
   await app.listen(3000);
   Logger.log(`App running on Port 3000`);
-
 
 }
 bootstrap();
